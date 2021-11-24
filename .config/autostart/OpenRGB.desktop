@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Categories=Utility;
+Comment=Control RGB lighting
+Encoding=UTF-8
+Exec=sudo openrgb -startminimized -p white.org
+Icon=OpenRGB
+Name=OpenRGB
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
