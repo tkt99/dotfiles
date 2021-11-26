@@ -5,6 +5,7 @@
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vifm setlocal foldmethod=marker
 augroup END
 
 " }}}
@@ -25,6 +26,7 @@ filetype indent on
 
 " Turn syntax highlighting on.
 syntax on
+syntax enable
 
 " Add numbers to each line on the left-hand side.
 set number
@@ -85,8 +87,12 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+packadd! dracula
+colorscheme dracula
 
-
+highlight Comment cterm=italic
+"set t_ZH=[3m
+"set t_ZR=[23m
 
 "}}}
 

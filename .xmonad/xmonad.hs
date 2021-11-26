@@ -24,7 +24,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "termite"
+myTerminal      = "alacritty"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -66,7 +66,10 @@ myFocusedBorderColor = "#47ffd7"
 --
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Open Rofi
-    [ ((controlMask,        xK_r    ), spawn "rofi -show drun")
+    [ ((mod4Mask,        xK_r    ), spawn "rofi -show drun")
+
+    -- Open file manager
+    , ((mod4Mask,        xK_e    ), spawn "alacritty -e vifm")
 
     -- Open Rofi File-browser-extended
     --, ((controlMask .|. shiftMask, xK_f), spawn "rofi -show file-browser-extended")
@@ -80,18 +83,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch spotify 
     , ((modm,               xK_s    ), spawn "spotify")
 
-    -- launch discord 
-    , ((modm,               xK_d    ), spawn "discord")
 
     -- launch notion
     , ((modm,               xK_n    ), spawn "Notion")
 
     -- screen capture
-    , ((modm .|. shiftMask, xK_s ), spawn "flameshot gui")
+    , ((mod4Mask .|. shiftMask, xK_s ), spawn "flameshot gui")
 
     
     -- launch a terminal
-    , ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    , ((mod4Mask,           xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
@@ -100,7 +101,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    , ((mod4Mask,           xK_z     ), kill)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)

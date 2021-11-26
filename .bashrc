@@ -10,7 +10,10 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# set vim mode in bash
 set -o vi
+
+# remap escape to kj
 bind '"kj":"\e"'
 
 source /usr/share/doc/pkgfile/command-not-found.bash
