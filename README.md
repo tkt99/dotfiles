@@ -2,7 +2,7 @@
 
 shell: Bash  
 terminal: alacritty  
-window manager: xmoand    
+window manager: xmonad    
 file manager: vifm  
 text editor: vim  
 
