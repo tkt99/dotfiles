@@ -1,6 +1,6 @@
 # My dot files for:
 
-shell: Bash  
+shell: bash  
 terminal: alacritty  
 window manager: xmonad    
 file manager: vifm  
