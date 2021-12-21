@@ -1,8 +1,8 @@
-# My dot files for:
+# My dot files for Arch Linux PC:
 
-shell: bash  
+shell: bash
 terminal: alacritty  
 window manager: xmonad    
-file manager: vifm  
-text editor: vim  
+file manager: vifm
+text editor: vim 
 
