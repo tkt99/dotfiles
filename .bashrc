@@ -16,4 +16,10 @@ set -o vi
 # remap escape to kj
 bind '"kj":"\e"'
 
+
 source /usr/share/doc/pkgfile/command-not-found.bash
+
+# replace with a better ascii generator
+neofetch
+
+

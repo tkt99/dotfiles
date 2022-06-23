@@ -1,14 +1,11 @@
-# My dot files for Arch Linux PC:
+# dots for Linux PC
 
-Purpose of choosing Linux:
-- become more familiar with Linux as a daily driver
-- tinker and customize due to the nature of FOSS 
+terminal: alacritty
 
+window manager: qtile
 
-terminal: alacritty  
+compositor: picom
 
-window manager: xmonad    
+file manager: vifm and nemo
 
-file manager: vifm
-
-
+app launcher/power menu: rofi
