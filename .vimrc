@@ -131,6 +131,8 @@ nnoremap <space> :
 " !python3 % executes the current file with Python.
 nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
+nnoremap H ^
+nnoremap J $
 
 "  }}}
 
