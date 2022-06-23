@@ -1,8 +1,14 @@
-# My dot files for:
+# My dot files for Arch Linux PC:
 
-shell: Bash  
+Purpose of choosing Linux:
+- become more familiar with Linux as a daily driver
+- tinker and customize due to the nature of FOSS 
+
+
 terminal: alacritty  
-window manager: xmoand    
-file manager: vifm  
-text editor: vim  
+
+window manager: xmonad    
+
+file manager: vifm
+
 
