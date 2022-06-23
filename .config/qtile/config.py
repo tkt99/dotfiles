@@ -81,8 +81,8 @@ keys = [
     # Media
     Key([mod], "period", lazy.spawn("playerctl next"), desc="next song"),
     Key([mod], "comma", lazy.spawn("playerctl previous"), desc="previous song"),
-    Key(["control"], "Right", lazy.spawn("playerctl next"), desc="next song"),
-    Key(["control"], "Left", lazy.spawn("playerctl previous"), desc="previous song"),
+    Key([mod, "control"], "Right", lazy.spawn("playerctl next"), desc="next song"),
+    Key([mod, "control"], "Left", lazy.spawn("playerctl previous"), desc="previous song"),
 
     Key([mod], "slash", lazy.spawn("playerctl play-pause"), desc="pause spotify"),
 
