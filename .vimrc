@@ -9,6 +9,8 @@ augroup filetype_vim
 augroup END
 
 " }}}
+"
+"
 
 "SETTINGS ---------------------------------------------------------------- {{{
 
@@ -136,3 +138,16 @@ nnoremap J $
 
 "  }}}
 
+" }}}
+" " FoxDot {{{2
+"
+" " Open a terminal buffer and run foxdot command with pipe option
+"
+"
+" " }}}
+"
+" " }}}
+" " settings {{{1
+"
+" " To see what is the option doing press:
+" "    'K (Shift-k) on that word' or ':h ic'

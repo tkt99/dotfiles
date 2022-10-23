@@ -5,6 +5,7 @@
 # Copyright (c) 2012 Craig Barnes
 # Copyright (c) 2013 horsik
 # Copyright (c) 2013 Tao Sauvage
+
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -52,7 +53,7 @@ keys = [
     Key([mod], "l", lazy.layout.grow(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.up(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.down(), desc="Move focus up"),
-    Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "Tab", lazy.layout.up(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -70,7 +71,7 @@ keys = [
     Key([mod], "period", lazy.layout.decrease_nmaster()),
     
     # Launching applications
-    Key([mod], "r", lazy.spawn("/home/_2k/.config/rofi/launchers/misc/launcher.sh"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "space", lazy.spawn("/home/_2k/.config/rofi/launchers/misc/launcher.sh"), desc="Spawn a command using a prompt widget"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
@@ -81,9 +82,6 @@ keys = [
     # Media
     Key([mod], "period", lazy.spawn("playerctl next"), desc="next song"),
     Key([mod], "comma", lazy.spawn("playerctl previous"), desc="previous song"),
-    Key([mod, "control"], "Right", lazy.spawn("playerctl next"), desc="next song"),
-    Key([mod, "control"], "Left", lazy.spawn("playerctl previous"), desc="previous song"),
-
     Key([mod], "slash", lazy.spawn("playerctl play-pause"), desc="pause spotify"),
 
     Key([mod], "Up", lazy.spawn("playerctl volume 0.1+"), desc="raise volume by 10%"),
@@ -92,8 +90,8 @@ keys = [
     Key(["control"], "Down", lazy.spawn("playerctl volume 0.1-"), desc="lower volume by 10%"),
 
     # Windows 
-    Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "z", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "r", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "t", lazy.window.toggle_floating()),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     Key([mod, "shift"], "f", lazy.layout.flip()),
