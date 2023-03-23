@@ -1,18 +1,4 @@
-" VIMSCRIPTS ------------------------------------------------------------- {{{
-
-" This will enable code folding.
-" Use the marker method of folding.
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd FileType vifm setlocal foldmethod=marker
-augroup END
-
-" }}}
-"
-"
-
-"SETTINGS ---------------------------------------------------------------- {{{
+" SETTINGS
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
@@ -34,7 +20,7 @@ syntax enable
 set number
 
 " Highlight cursor line underneath the cursor horizontally.
-set cursorline
+"set cursorline
 
 " Set shift width to 4 spaces.
 set shiftwidth=4
@@ -89,20 +75,19 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-packadd! dracula
-colorscheme dracula
+set pastetoggle=<F3>
+"packadd! dracula
+"colorscheme dracula
 
 highlight Comment cterm=italic
 "set t_ZH=[3m
 "set t_ZR=[23m
 
-"}}}
-
-" MAPPINGS " --------------------------------------------------------------------- {{{
+" MAPPINGS "
 
 " Remap redo key
 nnoremap rr <c-r>
-
+xnoremap p pgvy
 
 " Pressing the letter o will open a new line below the current one.
 " Exit insert mode after creating a new line above or below the current line.
@@ -134,20 +119,4 @@ nnoremap <space> :
 nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
 nnoremap H ^
-nnoremap J $
-
-"  }}}
-
-" }}}
-" " FoxDot {{{2
-"
-" " Open a terminal buffer and run foxdot command with pipe option
-"
-"
-" " }}}
-"
-" " }}}
-" " settings {{{1
-"
-" " To see what is the option doing press:
-" "    'K (Shift-k) on that word' or ':h ic'
+nnoremap L $
